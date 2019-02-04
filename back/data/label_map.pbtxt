@@ -1,0 +1,6 @@
+item {
+  name: "object"
+  id: 1
+  display_name: "object"
+}
+
