@@ -1,0 +1,28 @@
+/* CSS declarations go here */
+material-icons {
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: 'liga';
+    -moz-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+}
+
+.align-center {
+    margin-left: auto;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+html, body, .ion-app, .ion-content {
+    background-color: transparent;
+    transition: background-color 0.2s;
+}
+
+.laser {
+    /*background: rgba(255, 0, 0, 0.2);*/
+}
+
+.loading {
+    background: black;
+}

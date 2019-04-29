@@ -1,0 +1,106 @@
+<template name="main">
+
+    <div id="loading" style="color: #f44336; background: black; position: absolute; left: 0px; right: 0px; bottom: 0px; top: 0px; z-index: 1000;">
+
+        <div style="text-align: center; margin-top: 60%">
+            Loading Smart Scan models...
+        </div>
+        <div style="text-align: center; margin-top: 15%">
+            <div class="preloader-wrapper active big" style="">
+                <div class="spinner-layer spinner-red-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="looking_for" style="position: absolute; left: 0px; right: 0px; bottom: 0px; top: 0px; z-index: 500; display: none">
+
+        <div style="text-align: center; margin-top: 60%; font-weight: bolder; color: #f44336; font-size: large">
+            Waiting for fixed size object ...
+        </div>
+        <div style="text-align: center; margin-top: 15%">
+            <div class="preloader-wrapper active big" style="">
+                <div class="spinner-layer spinner-red-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="scanning_for" style="position: absolute; left: 0px; right: 0px; bottom: 0px; top: 0px; z-index: 500; display: none">
+
+        <div style="text-align: center; margin-top: 60%; font-weight: bolder; color: #f44336; font-size: large">
+            Now scan entire person ...
+        </div>
+
+    </div>
+
+    <div id="processing" style="position: absolute; left: 0px; right: 0px; bottom: 0px; top: 0px; z-index: 500; display: none">
+
+        <div style="text-align: center; margin-top: 60%; font-weight: bolder; color: #f44336; font-size: large">
+            <div class="card-panel white" style="width: 80%; margin-left: 10%; border-radius: 20px">
+                <span class="red-text">
+                    Processing...
+                    <div class="progress red lighten-4">
+                        <div class="determinate red" style="width: {{ processing_progress }}%"></div>
+                    </div>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="results" style="position: absolute; left: 5%; right: 5%; bottom: 5%; top: 5%; z-index: 800; display: none">
+
+        <div style="text-align: right; height: 100%; font-weight: bolder; color: #f44336; font-size: large">
+            <div class="card-panel white" style="border-radius: 20px; height: 100%">
+                <span class="red-text" style="text-align: center">
+                    <h3 style="text-align: right"><i id='close_results' class="material-icons">close</i></h3>
+                    <h3>Sizes found</h3>
+                    <div class="row" style="text-align: left">
+                        {{#each size_results}}
+
+                            <div class="divider"></div>
+                            <div class="section">
+                                <div class="col s9">
+                                    {{key}}:
+                                </div>
+
+                                <div class="col s3">
+                                    {{value}}
+                                </div>
+                            </div>
+
+                        {{/each}}
+                    </div>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div style="position: absolute; bottom: 10%; width: 100%; z-index: 600">
+        <div style="text-align: center">
+            <a id="scanning" class="waves-effect waves-light btn-large red" style="border-radius: 50%;">
+                <i class="large material-icons" style="font-size: 30px">camera</i>
+            </a>
+        </div>
+    </div>
+
+</template>

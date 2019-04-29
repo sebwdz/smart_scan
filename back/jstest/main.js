@@ -1,6 +1,5 @@
 
-const http = require("http"),
-    url = require("url");
+const http = require("http"), url = require("url");
 
 const tf = require('@tensorflow/tfjs');
 const posenet = require('@tensorflow-models/posenet');
